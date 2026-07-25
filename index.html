@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio website for Lyn, a front-end developer.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta name="description" content="Portfolio of Nguyen Huu Linh, a software engineer specializing in web technology.">
     <link rel="stylesheet" href="style.css">
-    <title>Lyn | Front-End Developer</title>
+    <title>Nguyen Huu Linh | Software Engineer</title>
 </head>
 
 <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="noise-layer" aria-hidden="true"></div>
+
     <header class="site-header">
-        <a href="#home" class="logo" aria-label="Lyn home">Lyn</a>
+        <a href="#home" class="logo" aria-label="Nguyen Huu Linh home">Linh</a>
 
         <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-controls="primary-navigation">
         <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
@@ -22,11 +24,10 @@
         <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -34,145 +35,259 @@
 
     <main>
         <section id="home" class="hero">
-            <div class="hero-media" aria-label="Lyn training in a gym">
-                <img src="IMG_AVT.jpg" alt="Lyn lifting weights in a gym">
-            </div>
-
-            <div class="hero-content">
-                <p class="eyebrow">Front-End Developer</p>
-                <h1>Hi, I'm <span>Lyn</span></h1>
-                <h2 class="typing-text">I build <span></span></h2>
-                <p>
-                    I create clean, responsive, and practical web interfaces with a focus on useful details,
-                    fast layouts, and experiences that feel polished on every screen.
+            <div class="hero-copy reveal">
+                <p class="eyebrow">Software Engineer / Web Technology</p>
+                <h1>Nguyen Huu Linh</h1>
+                <h2 class="typing-text">Building <span></span></h2>
+                <p class="hero-summary">
+                    Recent Information Technology graduate focused on fullstack web development,
+                    RESTful API design, authentication, authorization, and database-driven systems.
                 </p>
 
-                <div class="hero-actions" aria-label="Primary actions">
-                    <a href="#projects" class="btn btn-primary">
-                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                        View My Work
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
-                        Contact Me
-                    </a>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="mailto:lyn25092004@gmail.com" class="btn btn-secondary">Contact Me</a>
                 </div>
 
-                <div class="social-icons" aria-label="Social links">
-                    <a href="#" aria-label="Facebook">
-                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
-                    </a>
-                    <a href="#" aria-label="Twitter">
-                        <i class="fa-brands fa-twitter" aria-hidden="true"></i>
-                    </a>
-                    <a href="#" aria-label="LinkedIn">
-                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
-                    </a>
-                    <a href="#" aria-label="GitHub">
-                        <i class="fa-brands fa-github" aria-hidden="true"></i>
-                    </a>
+                <div class="social-placeholders" aria-label="Social icon placeholders">
+                    <a href="#" aria-label="Add social icon 1"><span>+</span></a>
+                    <a href="#" aria-label="Add social icon 2"><span>+</span></a>
+                    <a href="#" aria-label="Add social icon 3"><span>+</span></a>
+                    <a href="#" aria-label="Add social icon 4"><span>+</span></a>
                 </div>
             </div>
+
+            <div class="hero-visual reveal" data-tilt-card>
+                <div class="avatar-frame">
+                    <img src="IMG_AVT.jpg" alt="Nguyen Huu Linh training in a gym">
+                </div>
+                <div class="profile-badge" aria-label="Profile focus">
+                    <span>Web Technology</span>
+                    <strong>Fullstack Developer</strong>
+                </div>
+            </div>
+
+            <aside class="hero-panel reveal" data-tilt-card>
+                <div class="panel-header">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <pre><code>const profile = {
+  name: "Nguyen Huu Linh",
+  major: "Web Technology",
+  role: "Software Engineer",
+  stack: ["ReactJS", "NestJS", "MongoDB"],
+  goal: "Grow through real projects"
+};</code></pre>
+            </aside>
         </section>
 
-        <section id="services" class="section">
+        <section id="about" class="section about-section reveal">
             <div class="section-heading">
-                <p class="eyebrow">Services</p>
-                <h2>What I Can Do</h2>
+                <p class="eyebrow">About</p>
+                <h2>A web engineer profile built around real system work.</h2>
             </div>
-            <div class="card-grid">
-                <article class="feature-card">
-                    <span class="card-number">01</span>
-                    <h3>Responsive Websites</h3>
-                    <p>Modern layouts that adapt naturally from phones to desktops.</p>
+            <div class="about-grid">
+                <article class="info-card" data-tilt-card>
+                    <span>01</span>
+                    <h3>Fullstack Web</h3>
+                    <p>ReactJS on the frontend, Node.js, Express.js and NestJS on the backend.</p>
                 </article>
-                <article class="feature-card">
-                    <span class="card-number">02</span>
-                    <h3>UI Implementation</h3>
-                    <p>Careful HTML and CSS that turns design ideas into polished interfaces.</p>
+                <article class="info-card" data-tilt-card>
+                    <span>02</span>
+                    <h3>API & Security</h3>
+                    <p>RESTful API, JWT authentication, authorization, and role-based access control.</p>
                 </article>
-                <article class="feature-card">
-                    <span class="card-number">03</span>
-                    <h3>Frontend Cleanup</h3>
-                    <p>Refined structure, accessibility, and styling for pages that feel more professional.</p>
+                <article class="info-card" data-tilt-card>
+                    <span>03</span>
+                    <h3>Database Systems</h3>
+                    <p>MongoDB, Mongoose, MySQL, Sequelize, schema design, and query optimization basics.</p>
                 </article>
             </div>
         </section>
 
-        <section id="skills" class="section split-section">
+        <section id="skills" class="section skills-section reveal">
             <div class="section-heading">
                 <p class="eyebrow">Skills</p>
-                <h2>Tools I Use</h2>
+                <h2>Technology stack with visual language logos.</h2>
             </div>
-            <div class="skill-list">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Responsive Design</span>
-                <span>UI Design</span>
-                <span>Git</span>
+
+            <div class="skill-grid">
+                <article class="skill-card" data-tilt-card>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 logo">
+                    <span>HTML5</span>
+                </article>
+                <article class="skill-card" data-tilt-card>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 logo">
+                    <span>CSS3</span>
+                </article>
+                <article class="skill-card" data-tilt-card>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo">
+                    <span>JavaScript</span>
+                </article>
+                <article class="skill-card" data-tilt-card>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript logo">
+                    <span>TypeScript</span>
+                </article>
+                <article class="skill-card" data-tilt-card>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="ReactJS logo">
+                    <span>ReactJS</span>
+                </article>
+                <article class="skill-card" data-tilt-card>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js logo">
+                    <span>Node.js</span>
+                </article>
+                <article class="skill-card" data-tilt-card>
+                    <img class="invert-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js logo">
+                    <span>Express.js</span>
+                </article>
+                <article class="skill-card" data-tilt-card>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg" alt="NestJS logo">
+                    <span>NestJS</span>
+                </article>
+                <article class="skill-card" data-tilt-card>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB logo">
+                    <span>MongoDB</span>
+                </article>
+                <article class="skill-card" data-tilt-card>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL logo">
+                    <span>MySQL</span>
+                </article>
+                <article class="skill-card" data-tilt-card>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg" alt="Sequelize logo">
+                    <span>Sequelize</span>
+                </article>
+                <article class="skill-card" data-tilt-card>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git logo">
+                    <span>Git</span>
+                </article>
+            </div>
+
+            <div class="skill-tags" aria-label="Additional skills">
+                <span>RESTful API</span>
+                <span>JWT</span>
+                <span>RBAC</span>
+                <span>Mongoose</span>
+                <span>Socket.IO</span>
+                <span>Render</span>
+                <span>Vercel</span>
+                <span>GitHub</span>
+                <span>OOP</span>
+                <span>MVC</span>
+                <span>Client-Server</span>
             </div>
         </section>
 
-        <section id="projects" class="section">
+        <section id="projects" class="section projects-section reveal">
             <div class="section-heading">
                 <p class="eyebrow">Projects</p>
-                <h2>Selected Work</h2>
+                <h2>Graduation project with full e-commerce workflow.</h2>
             </div>
-            <div class="project-list">
-                <article class="project-item">
-                    <span>Portfolio</span>
-                    <h3>Personal Profile Website</h3>
-                    <p>A responsive personal site with stronger structure, clearer sections, and refined visual details.</p>
-                </article>
-                <article class="project-item">
-                    <span>Frontend</span>
-                    <h3>Landing Page UI</h3>
-                    <p>A clean page concept focused on readable content, balanced spacing, and mobile-friendly layout.</p>
-                </article>
-            </div>
+
+            <article class="project-showcase" data-tilt-card>
+                <div>
+                    <p class="project-label">Graduation Project</p>
+                    <h3>Agricultural Supplies E-Commerce Website</h3>
+                    <p>
+                        A fullstack e-commerce system with product search, cart, order placement,
+                        online payment, order tracking, admin dashboard, revenue statistics,
+                        product/order/customer management, inventory import-export-return, debt tracking,
+                        chatBox and chatBot support.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/LynKiss/FE_DATN/tree/men">Frontend Source</a>
+                        <a href="https://github.com/LynKiss/da_be/tree/Nghiepvunangcao">Backend Source</a>
+                    </div>
+                </div>
+
+                <div class="project-stack">
+                    <span>ReactJS</span>
+                    <span>NestJS</span>
+                    <span>REST API</span>
+                    <span>JWT</span>
+                    <span>RBAC</span>
+                    <span>MongoDB</span>
+                    <span>MySQL</span>
+                    <span>Socket.IO</span>
+                </div>
+            </article>
         </section>
 
-        <section id="education" class="section timeline-section">
+        <section id="education" class="section education-section reveal">
             <div class="section-heading">
                 <p class="eyebrow">Education</p>
-                <h2>Learning Path</h2>
+                <h2>Foundation and learning path.</h2>
             </div>
+
             <div class="timeline">
-                <article>
-                    <span>2026</span>
-                    <h3>Frontend Development</h3>
-                    <p>Building stronger foundations in layout, interaction, and clean website structure.</p>
+                <article data-tilt-card>
+                    <span>2022 - 2026</span>
+                    <h3>Hung Yen University of Technology and Education (UTEHY)</h3>
+                    <p>Faculty of Information Technology. Major: Web Technology. GPA: 3.1.</p>
                 </article>
-                <article>
-                    <span>Ongoing</span>
-                    <h3>Self Improvement</h3>
-                    <p>Practicing better UI details, code organization, and consistent design systems.</p>
+                <article data-tilt-card>
+                    <span>28TECH</span>
+                    <h3>Fullstack Web Programming</h3>
+                    <p>JavaScript, ReactJS, SQL, Node.js, NestJS, MongoDB and practical web foundations.</p>
                 </article>
             </div>
         </section>
 
-        <section id="experience" class="section">
-            <div class="section-heading">
-                <p class="eyebrow">Experience</p>
-                <h2>Recent Focus</h2>
+        <section id="contact" class="section contact-section reveal">
+            <div class="contact-panel" data-tilt-card>
+                <div>
+                    <p class="eyebrow">Contact</p>
+                    <h2>Ready to learn, build, and grow through real projects.</h2>
+                </div>
+                <div class="contact-actions">
+                    <a href="mailto:lyn25092004@gmail.com" class="contact-link">lyn25092004@gmail.com</a>
+                    <a href="tel:0384317729" class="contact-link">0384317729</a>
+                    <a href="https://github.com/LynKiss" class="contact-link">github.com/LynKiss</a>
+                </div>
             </div>
-            <div class="highlight-panel">
-                <p>
-                    I focus on creating landing pages and portfolio interfaces that are fast to scan,
-                    easy to navigate, and visually balanced without unnecessary complexity.
-                </p>
-            </div>
-        </section>
-
-        <section id="contact" class="section contact-section">
-            <div class="section-heading">
-                <p class="eyebrow">Contact</p>
-                <h2>Let's Build Something</h2>
-            </div>
-            <a href="mailto:hello@example.com" class="contact-link">hello@example.com</a>
         </section>
     </main>
+
+    <script>
+        const glow = document.querySelector(".cursor-glow");
+
+        window.addEventListener("pointermove", (event) => {
+            if (!glow) return;
+            glow.style.left = `${event.clientX}px`;
+            glow.style.top = `${event.clientY}px`;
+        });
+
+        const revealObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.16 }
+        );
+
+        document.querySelectorAll(".reveal").forEach((element) => {
+            revealObserver.observe(element);
+        });
+
+        document.querySelectorAll("[data-tilt-card]").forEach((card) => {
+            card.addEventListener("pointermove", (event) => {
+                const rect = card.getBoundingClientRect();
+                const x = (event.clientX - rect.left) / rect.width - 0.5;
+                const y = (event.clientY - rect.top) / rect.height - 0.5;
+
+                card.style.transform = `perspective(900px) rotateX(${y * -5}deg) rotateY(${x * 6}deg) translateY(-3px)`;
+            });
+
+            card.addEventListener("pointerleave", () => {
+                card.style.transform = "";
+            });
+        });
+    </script>
 </body>
 
 </html>
