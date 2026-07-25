@@ -162,6 +162,40 @@ a {
     transform: translateY(-1px);
 }
 
+.language-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.2rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.045);
+}
+
+.lang-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.35rem;
+    min-height: 2rem;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--muted);
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.lang-btn:hover,
+.lang-btn:focus-visible,
+.lang-btn.is-active {
+    background: linear-gradient(135deg, rgba(62, 217, 199, 0.22), rgba(88, 166, 255, 0.18));
+    color: var(--text);
+}
+
 .nav-toggle {
     position: absolute;
     width: 1px;
@@ -274,10 +308,13 @@ h1 {
     font-weight: 800;
 }
 
-.typing-text span::before {
-    content: "fullstack web apps";
+.typing-word {
     color: var(--warm);
-    animation: words 10s infinite;
+    transition: opacity 0.2s ease;
+}
+
+.typing-word.is-changing {
+    opacity: 0;
 }
 
 .hero-summary {
@@ -706,28 +743,6 @@ h1 {
 .reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-@keyframes words {
-    0%,
-    23% {
-        content: "fullstack web apps";
-    }
-
-    24%,
-    48% {
-        content: "RESTful APIs";
-    }
-
-    49%,
-    73% {
-        content: "e-commerce systems";
-    }
-
-    74%,
-    100% {
-        content: "web technology";
-    }
 }
 
 @keyframes softLift {

@@ -24,30 +24,35 @@
 
         <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#education" data-i18n="nav.education">Education</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </nav>
+
+        <div class="language-switcher" aria-label="Language switcher">
+            <button type="button" class="lang-btn is-active" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="vi">VI</button>
+        </div>
     </header>
 
     <main>
         <section id="home" class="hero">
             <div class="hero-copy reveal">
-                <p class="eyebrow">Software Engineer / Web Technology</p>
+                <p class="eyebrow" data-i18n="hero.role">Software Engineer / Web Technology</p>
                 <h1>Nguyen Huu Linh</h1>
-                <h2 class="typing-text">Building <span> </span></h2>
-                <p class="hero-summary">
+                <h2 class="typing-text"><span data-i18n="hero.typingPrefix">Building</span> <span class="typing-word" data-typing></span></h2>
+                <p class="hero-summary" data-i18n="hero.summary">
                     Recent Information Technology graduate focused on fullstack web development,
                     RESTful API design, authentication, authorization, and database-driven systems.
                 </p>
 
                 <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="mailto:lyn25092004@gmail.com" class="btn btn-secondary">Contact Me</a>
+                    <a href="#projects" class="btn btn-primary" data-i18n="hero.viewProjects">View Projects</a>
+                    <a href="mailto:lyn25092004@gmail.com" class="btn btn-secondary" data-i18n="hero.contactMe">Contact Me</a>
                 </div>
 
                 <div class="social-placeholders" aria-label="Social icon placeholders">
@@ -63,8 +68,8 @@
                     <img src="IMG_AVT.jpg" alt="Nguyen Huu Linh training in a gym">
                 </div>
                 <div class="profile-badge" aria-label="Profile focus">
-                    <span>Web Technology</span>
-                    <strong>Fullstack Developer</strong>
+                    <span data-i18n="badge.major">Web Technology</span>
+                    <strong data-i18n="badge.role">Fullstack Developer</strong>
                 </div>
             </div>
 
@@ -74,7 +79,7 @@
                     <span></span>
                     <span></span>
                 </div>
-                <pre><code>const profile = {
+                <pre><code data-i18n="hero.code">const profile = {
   name: "Nguyen Huu Linh",
   major: "Web Technology",
   role: "Software Engineer",
@@ -86,35 +91,35 @@
 
         <section id="about" class="section about-section reveal">
             <div class="section-heading">
-                <p class="eyebrow">About</p>
-                <h2>A web engineer profile built around real system work.</h2>
+                <p class="eyebrow" data-i18n="about.eyebrow">About</p>
+                <h2 data-i18n="about.title">A web engineer profile built around real system work.</h2>
             </div>
             <div class="about-grid">
                 <article class="info-card" data-tilt-card>
                     <span>01</span>
-                    <h3>Fullstack Web</h3>
-                    <p>ReactJS on the frontend, Node.js, Express.js and NestJS on the backend.</p>
+                    <h3 data-i18n="about.card1.title">Fullstack Web</h3>
+                    <p data-i18n="about.card1.text">ReactJS on the frontend, Node.js, Express.js and NestJS on the backend.</p>
                 </article>
                 <article class="info-card" data-tilt-card>
                     <span>02</span>
-                    <h3>API & Security</h3>
-                    <p>RESTful API, JWT authentication, authorization, and role-based access control.</p>
+                    <h3 data-i18n="about.card2.title">API & Security</h3>
+                    <p data-i18n="about.card2.text">RESTful API, JWT authentication, authorization, and role-based access control.</p>
                 </article>
                 <article class="info-card" data-tilt-card>
                     <span>03</span>
-                    <h3>Database Systems</h3>
-                    <p>MongoDB, Mongoose, MySQL, Sequelize, schema design, and query optimization basics.</p>
+                    <h3 data-i18n="about.card3.title">Database Systems</h3>
+                    <p data-i18n="about.card3.text">MongoDB, Mongoose, MySQL, Sequelize, schema design, and query optimization basics.</p>
                 </article>
             </div>
         </section>
 
         <section id="skills" class="section skills-section reveal">
             <div class="section-heading">
-                <p class="eyebrow">Skills</p>
-                <h2>Technology </h2>
+                <p class="eyebrow" data-i18n="skills.eyebrow">Skills</p>
+                <h2 data-i18n="skills.title">Technologies Used</h2>
             </div>
 
-            <h3 class="skill-group-title">Core Stack</h3>
+            <h3 class="skill-group-title" data-i18n="skills.core">Core Stack</h3>
             <div class="skill-grid">
                 <article class="skill-card" data-tilt-card>
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
@@ -194,7 +199,7 @@
                 </article>
             </div>
 
-            <h3 class="skill-group-title">Tools & Libraries</h3>
+            <h3 class="skill-group-title" data-i18n="skills.tools">Tools & Libraries</h3>
             <div class="skill-grid compact-grid">
                 <article class="skill-card" data-tilt-card>
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git logo">
@@ -267,23 +272,23 @@
 
         <section id="projects" class="section projects-section reveal">
             <div class="section-heading">
-                <p class="eyebrow">Projects</p>
-                <h2>Graduation project with full e-commerce workflow.</h2>
+                <p class="eyebrow" data-i18n="projects.eyebrow">Projects</p>
+                <h2 data-i18n="projects.title">Graduation project with full e-commerce workflow.</h2>
             </div>
 
             <article class="project-showcase" data-tilt-card>
                 <div>
-                    <p class="project-label">Graduation Project</p>
-                    <h3>Agricultural Supplies E-Commerce Website</h3>
-                    <p>
+                    <p class="project-label" data-i18n="projects.label">Graduation Project</p>
+                    <h3 data-i18n="projects.name">Agricultural Supplies E-Commerce Website</h3>
+                    <p data-i18n="projects.desc">
                         A fullstack e-commerce system with product search, cart, order placement,
                         online payment, order tracking, admin dashboard, revenue statistics,
                         product/order/customer management, inventory import-export-return, debt tracking,
                         chatBox and chatBot support.
                     </p>
                     <div class="project-links">
-                        <a href="https://github.com/LynKiss/FE_DATN/tree/men">Frontend Source</a>
-                        <a href="https://github.com/LynKiss/da_be/tree/Nghiepvunangcao">Backend Source</a>
+                        <a href="https://github.com/LynKiss/FE_DATN/tree/men" data-i18n="projects.frontend">Frontend Source</a>
+                        <a href="https://github.com/LynKiss/da_be/tree/Nghiepvunangcao" data-i18n="projects.backend">Backend Source</a>
                     </div>
                 </div>
 
@@ -302,15 +307,15 @@
 
         <section id="education" class="section education-section reveal">
             <div class="section-heading">
-                <p class="eyebrow">Education</p>
-                <h2>Foundation and learning path.</h2>
+                <p class="eyebrow" data-i18n="education.eyebrow">Education</p>
+                <h2 data-i18n="education.title">Foundation and learning path.</h2>
             </div>
 
             <div class="timeline">
                 <article data-tilt-card>
                     <span>2022 - 2026</span>
-                    <h3>Hung Yen University of Technology and Education (UTEHY)</h3>
-                    <p>Faculty of Information Technology. Major: Web Technology.</p>
+                    <h3 data-i18n="education.school">Hung Yen University of Technology and Education (UTEHY)</h3>
+                    <p data-i18n="education.desc">Faculty of Information Technology. Major: Web Technology.</p>
                 </article>
 
             </div>
@@ -319,8 +324,8 @@
         <section id="contact" class="section contact-section reveal">
             <div class="contact-panel" data-tilt-card>
                 <div>
-                    <p class="eyebrow">Contact</p>
-                    <h2>Thank you for visiting!</h2>
+                    <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+                    <h2 data-i18n="contact.title">Thank you for visiting!</h2>
                 </div>
                 <div class="contact-actions">
                     <a href="mailto:lyn25092004@gmail.com" class="contact-link">lyn25092004@gmail.com</a>
@@ -332,6 +337,154 @@
     </main>
 
     <script>
+        const translations = {
+            en: {
+                title: "Nguyen Huu Linh | Software Engineer",
+                description: "Portfolio of Nguyen Huu Linh, a software engineer specializing in web technology.",
+                typingWords: ["fullstack web apps", "RESTful APIs", "e-commerce systems", "web technology"],
+                "nav.home": "Home",
+                "nav.about": "About",
+                "nav.skills": "Skills",
+                "nav.projects": "Projects",
+                "nav.education": "Education",
+                "nav.contact": "Contact",
+                "hero.role": "Software Engineer / Web Technology",
+                "hero.typingPrefix": "Building",
+                "hero.summary": "Recent Information Technology graduate focused on fullstack web development, RESTful API design, authentication, authorization, and database-driven systems.",
+                "hero.viewProjects": "View Projects",
+                "hero.contactMe": "Contact Me",
+                "badge.major": "Web Technology",
+                "badge.role": "Fullstack Developer",
+                "hero.code": `const profile = {
+  name: "Nguyen Huu Linh",
+  major: "Web Technology",
+  role: "Software Engineer",
+  stack: ["ReactJS", "NestJS", "MongoDB"],
+  goal: "Grow through real projects"
+};`,
+                "about.eyebrow": "About",
+                "about.title": "A web engineer profile built around real system work.",
+                "about.card1.title": "Fullstack Web",
+                "about.card1.text": "ReactJS on the frontend, Node.js, Express.js and NestJS on the backend.",
+                "about.card2.title": "API & Security",
+                "about.card2.text": "RESTful API, JWT authentication, authorization, and role-based access control.",
+                "about.card3.title": "Database Systems",
+                "about.card3.text": "MongoDB, Mongoose, MySQL, Sequelize, schema design, and query optimization basics.",
+                "skills.eyebrow": "Skills",
+                "skills.title": "Technologies Used",
+                "skills.core": "Core Stack",
+                "skills.tools": "Tools & Libraries",
+                "projects.eyebrow": "Projects",
+                "projects.title": "Graduation project with full e-commerce workflow.",
+                "projects.label": "Graduation Project",
+                "projects.name": "Agricultural Supplies E-Commerce Website",
+                "projects.desc": "A fullstack e-commerce system with product search, cart, order placement, online payment, order tracking, admin dashboard, revenue statistics, product/order/customer management, inventory import-export-return, debt tracking, chatBox and chatBot support.",
+                "projects.frontend": "Frontend Source",
+                "projects.backend": "Backend Source",
+                "education.eyebrow": "Education",
+                "education.title": "Foundation and learning path.",
+                "education.school": "Hung Yen University of Technology and Education (UTEHY)",
+                "education.desc": "Faculty of Information Technology. Major: Web Technology.",
+                "contact.eyebrow": "Contact",
+                "contact.title": "Thank you for visiting!"
+            },
+            vi: {
+                title: "Nguyễn Hữu Linh | Kỹ sư phần mềm",
+                description: "Portfolio của Nguyễn Hữu Linh, kỹ sư phần mềm định hướng Công nghệ Web.",
+                typingWords: ["ứng dụng web fullstack", "RESTful API", "hệ thống thương mại điện tử", "công nghệ web"],
+                "nav.home": "Trang chủ",
+                "nav.about": "Giới thiệu",
+                "nav.skills": "Kỹ năng",
+                "nav.projects": "Dự án",
+                "nav.education": "Học vấn",
+                "nav.contact": "Liên hệ",
+                "hero.role": "Kỹ sư phần mềm / Công nghệ Web",
+                "hero.typingPrefix": "Xây dựng",
+                "hero.summary": "Sinh viên Công nghệ thông tin mới tốt nghiệp, tập trung vào phát triển web fullstack, thiết kế RESTful API, xác thực, phân quyền và các hệ thống sử dụng cơ sở dữ liệu.",
+                "hero.viewProjects": "Xem dự án",
+                "hero.contactMe": "Liên hệ",
+                "badge.major": "Công nghệ Web",
+                "badge.role": "Lập trình viên Fullstack",
+                "hero.code": `const profile = {
+  name: "Nguyễn Hữu Linh",
+  major: "Công nghệ Web",
+  role: "Kỹ sư phần mềm",
+  stack: ["ReactJS", "NestJS", "MongoDB"],
+  goal: "Phát triển qua dự án thực tế"
+};`,
+                "about.eyebrow": "Giới thiệu",
+                "about.title": "Profile kỹ sư web được xây dựng quanh kinh nghiệm làm hệ thống thực tế.",
+                "about.card1.title": "Web Fullstack",
+                "about.card1.text": "ReactJS ở frontend, Node.js, Express.js và NestJS ở backend.",
+                "about.card2.title": "API & Bảo mật",
+                "about.card2.text": "RESTful API, xác thực JWT, phân quyền và quản lý quyền theo vai trò.",
+                "about.card3.title": "Hệ thống dữ liệu",
+                "about.card3.text": "MongoDB, Mongoose, MySQL, Sequelize, thiết kế schema và kiến thức tối ưu truy vấn cơ bản.",
+                "skills.eyebrow": "Kỹ năng",
+                "skills.title": "Công nghệ sử dụng",
+                "skills.core": "Stack chính",
+                "skills.tools": "Công cụ & thư viện",
+                "projects.eyebrow": "Dự án",
+                "projects.title": "Đồ án tốt nghiệp với đầy đủ quy trình thương mại điện tử.",
+                "projects.label": "Đồ án tốt nghiệp",
+                "projects.name": "Website thương mại điện tử vật tư nông nghiệp",
+                "projects.desc": "Hệ thống e-commerce fullstack với tìm kiếm sản phẩm, giỏ hàng, đặt hàng, thanh toán online, theo dõi đơn hàng, dashboard quản trị, thống kê doanh thu, quản lý sản phẩm/đơn hàng/khách hàng, xuất nhập đổi trả kho, công nợ, chatBox và chatBot hỗ trợ người dùng.",
+                "projects.frontend": "Mã nguồn Frontend",
+                "projects.backend": "Mã nguồn Backend",
+                "education.eyebrow": "Học vấn",
+                "education.title": "Nền tảng học tập và định hướng phát triển.",
+                "education.school": "Trường Đại học Sư phạm Kỹ thuật Hưng Yên (UTEHY)",
+                "education.desc": "Khoa Công nghệ thông tin. Chuyên ngành: Công nghệ Web.",
+                "contact.eyebrow": "Liên hệ",
+                "contact.title": "Cảm ơn bạn đã ghé thăm!"
+            }
+        };
+
+        const typingElement = document.querySelector("[data-typing]");
+        let typingIndex = 0;
+        let activeTypingWords = translations.en.typingWords;
+
+        function setTypingWord(index = typingIndex) {
+            if (!typingElement) return;
+            typingElement.classList.add("is-changing");
+            window.setTimeout(() => {
+                typingElement.textContent = activeTypingWords[index % activeTypingWords.length];
+                typingElement.classList.remove("is-changing");
+            }, 160);
+        }
+
+        function applyLanguage(lang) {
+            const dictionary = translations[lang] || translations.en;
+            document.documentElement.lang = lang;
+            document.title = dictionary.title;
+            document.querySelector('meta[name="description"]').setAttribute("content", dictionary.description);
+
+            document.querySelectorAll("[data-i18n]").forEach((element) => {
+                const key = element.dataset.i18n;
+                if (dictionary[key]) element.textContent = dictionary[key];
+            });
+
+            document.querySelectorAll("[data-lang]").forEach((button) => {
+                button.classList.toggle("is-active", button.dataset.lang === lang);
+            });
+
+            activeTypingWords = dictionary.typingWords;
+            typingIndex = 0;
+            setTypingWord(0);
+            localStorage.setItem("preferredLanguage", lang);
+        }
+
+        document.querySelectorAll("[data-lang]").forEach((button) => {
+            button.addEventListener("click", () => applyLanguage(button.dataset.lang));
+        });
+
+        applyLanguage(localStorage.getItem("preferredLanguage") || "en");
+
+        window.setInterval(() => {
+            typingIndex += 1;
+            setTypingWord(typingIndex);
+        }, 2400);
+
         const glow = document.querySelector(".cursor-glow");
 
         window.addEventListener("pointermove", (event) => {
