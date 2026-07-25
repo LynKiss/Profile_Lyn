@@ -4,46 +4,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio website for Lyn, a front-end developer.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Portfolio Website</title>
+    <title>Lyn | Front-End Developer</title>
 </head>
+
 <body>
-    <header>
-        <a href="#home" class="logo">Lyn</a>
+    <header class="site-header">
+        <a href="#home" class="logo" aria-label="Lyn home">Lyn</a>
 
-        <nav>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-controls="primary-navigation">
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+            <span aria-hidden="true"></span>
+        </label>
+
+        <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
             <ul>
-                <a href="#home" class="active">Home</a>
-                <a href="#Services" class="active">Services</a>
-                <a href="#Skills" class="active">Skills</a>
-                <a href="#Education" class="active">Education</a>
-                <a href="#Experience" class="active">Experience</a>
-
-                <a href="#contact" class="active">Contact</a>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <section class="home">
-        <div class="home-img">
-            <img src="IMG_AVT.jpg" alt="Lyn" />
-        </div>
-        <div class="home-content">
-            <h1>Hi, I'm <span>Lyn</span></h1>
-            <h3 class="typing-text">I'm a <span></span>
-            </h3>
-            <p>I'm a passionate web developer with a love for creating beautiful and functional websites. I specialize
-                in front-end development and have experience working with various web technologies.</p>
 
-            <div class="social-icons">
-                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-media" aria-label="Lyn training in a gym">
+                <img src="IMG_AVT.jpg" alt="Lyn lifting weights in a gym">
             </div>
-            <a href="#" class="btn">View My Work</a>
-            <a href="#" class="btn">Contact Me</a>
-        </div>
-    </section>
+
+            <div class="hero-content">
+                <p class="eyebrow">Front-End Developer</p>
+                <h1>Hi, I'm <span>Lyn</span></h1>
+                <h2 class="typing-text">I build <span></span></h2>
+                <p>
+                    I create clean, responsive, and practical web interfaces with a focus on useful details,
+                    fast layouts, and experiences that feel polished on every screen.
+                </p>
+
+                <div class="hero-actions" aria-label="Primary actions">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                        Contact Me
+                    </a>
+                </div>
+
+                <div class="social-icons" aria-label="Social links">
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" aria-label="GitHub">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <div class="section-heading">
+                <p class="eyebrow">Services</p>
+                <h2>What I Can Do</h2>
+            </div>
+            <div class="card-grid">
+                <article class="feature-card">
+                    <span class="card-number">01</span>
+                    <h3>Responsive Websites</h3>
+                    <p>Modern layouts that adapt naturally from phones to desktops.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="card-number">02</span>
+                    <h3>UI Implementation</h3>
+                    <p>Careful HTML and CSS that turns design ideas into polished interfaces.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="card-number">03</span>
+                    <h3>Frontend Cleanup</h3>
+                    <p>Refined structure, accessibility, and styling for pages that feel more professional.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="section split-section">
+            <div class="section-heading">
+                <p class="eyebrow">Skills</p>
+                <h2>Tools I Use</h2>
+            </div>
+            <div class="skill-list">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Responsive Design</span>
+                <span>UI Design</span>
+                <span>Git</span>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="section-heading">
+                <p class="eyebrow">Projects</p>
+                <h2>Selected Work</h2>
+            </div>
+            <div class="project-list">
+                <article class="project-item">
+                    <span>Portfolio</span>
+                    <h3>Personal Profile Website</h3>
+                    <p>A responsive personal site with stronger structure, clearer sections, and refined visual details.</p>
+                </article>
+                <article class="project-item">
+                    <span>Frontend</span>
+                    <h3>Landing Page UI</h3>
+                    <p>A clean page concept focused on readable content, balanced spacing, and mobile-friendly layout.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="education" class="section timeline-section">
+            <div class="section-heading">
+                <p class="eyebrow">Education</p>
+                <h2>Learning Path</h2>
+            </div>
+            <div class="timeline">
+                <article>
+                    <span>2026</span>
+                    <h3>Frontend Development</h3>
+                    <p>Building stronger foundations in layout, interaction, and clean website structure.</p>
+                </article>
+                <article>
+                    <span>Ongoing</span>
+                    <h3>Self Improvement</h3>
+                    <p>Practicing better UI details, code organization, and consistent design systems.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="section-heading">
+                <p class="eyebrow">Experience</p>
+                <h2>Recent Focus</h2>
+            </div>
+            <div class="highlight-panel">
+                <p>
+                    I focus on creating landing pages and portfolio interfaces that are fast to scan,
+                    easy to navigate, and visually balanced without unnecessary complexity.
+                </p>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="section-heading">
+                <p class="eyebrow">Contact</p>
+                <h2>Let's Build Something</h2>
+            </div>
+            <a href="mailto:hello@example.com" class="contact-link">hello@example.com</a>
+        </section>
+    </main>
 </body>
 
 </html>
