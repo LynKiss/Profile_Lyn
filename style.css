@@ -370,21 +370,23 @@ h1 {
 .avatar-frame {
     position: relative;
     width: min(100%, 25.5rem);
-    padding: 0.7rem;
+    padding: 0.65rem;
     border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 8px 140px 8px 140px;
-    background: linear-gradient(135deg, rgba(62, 217, 199, 0.22), rgba(255, 255, 255, 0.05));
+    border-radius: 22px;
+    background:
+        linear-gradient(145deg, rgba(62, 217, 199, 0.16), rgba(255, 255, 255, 0.045)),
+        rgba(18, 22, 32, 0.8);
     box-shadow: var(--shadow);
-    animation: floatAvatar 5.2s ease-in-out infinite;
+    animation: softLift 6s ease-in-out infinite;
 }
 
 .avatar-frame::before {
     content: "";
     position: absolute;
-    inset: 1.1rem -1rem -1rem 1.1rem;
+    inset: 1rem -0.85rem -0.85rem 1rem;
     z-index: -1;
-    border: 1px solid rgba(255, 189, 110, 0.38);
-    border-radius: inherit;
+    border: 1px solid rgba(88, 166, 255, 0.24);
+    border-radius: 22px;
 }
 
 .avatar-frame img {
@@ -392,49 +394,34 @@ h1 {
     aspect-ratio: 4 / 5;
     object-fit: cover;
     object-position: center;
-    border-radius: 8px 122px 8px 122px;
+    border-radius: 16px;
 }
 
-.tech-orbit {
+.profile-badge {
     position: absolute;
-    inset: 0;
-    pointer-events: none;
-    animation: slowSpin 18s linear infinite;
-}
-
-.tech-orbit span {
-    position: absolute;
-    display: inline-flex;
-    align-items: center;
-    min-height: 2.3rem;
-    padding: 0 0.8rem;
+    right: 0;
+    bottom: 2rem;
+    display: grid;
+    gap: 0.2rem;
+    min-width: 13rem;
+    padding: 0.85rem 1rem;
     border: 1px solid var(--line);
-    border-radius: 999px;
-    background: rgba(18, 22, 32, 0.82);
-    color: var(--text);
-    font-size: 0.78rem;
+    border-radius: var(--radius);
+    background: rgba(15, 18, 26, 0.88);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(14px);
+}
+
+.profile-badge span {
+    color: var(--accent);
+    font-size: 0.75rem;
     font-weight: 900;
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
 }
 
-.tech-orbit span:nth-child(1) {
-    top: 8%;
-    left: 8%;
-}
-
-.tech-orbit span:nth-child(2) {
-    top: 12%;
-    right: 1%;
-}
-
-.tech-orbit span:nth-child(3) {
-    right: 3%;
-    bottom: 18%;
-}
-
-.tech-orbit span:nth-child(4) {
-    left: 6%;
-    bottom: 11%;
+.profile-badge strong {
+    color: var(--text);
+    font-size: 0.95rem;
 }
 
 .hero-panel,
@@ -560,6 +547,21 @@ h1 {
     gap: 0.9rem;
 }
 
+.skill-group-title {
+    margin: 2rem 0 0.9rem;
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.skill-group-title:first-of-type {
+    margin-top: 0;
+}
+
+.compact-grid .skill-card {
+    min-height: 8.5rem;
+}
+
 .skill-card {
     position: relative;
     display: grid;
@@ -614,7 +616,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     gap: 0.65rem;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
 }
 
 .skill-tags span,
@@ -728,20 +730,14 @@ h1 {
     }
 }
 
-@keyframes floatAvatar {
+@keyframes softLift {
     0%,
     100% {
         transform: translateY(0);
     }
 
     50% {
-        transform: translateY(-12px);
-    }
-}
-
-@keyframes slowSpin {
-    to {
-        transform: rotate(360deg);
+        transform: translateY(-6px);
     }
 }
 
@@ -859,15 +855,14 @@ h1 {
 
     .avatar-frame {
         width: min(100%, 21rem);
-        border-radius: 8px 86px 8px 86px;
     }
 
-    .avatar-frame img {
-        border-radius: 8px 76px 8px 76px;
-    }
-
-    .tech-orbit {
-        display: none;
+    .profile-badge {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: min(100%, 21rem);
+        margin-top: -1rem;
     }
 
     .skill-grid {
