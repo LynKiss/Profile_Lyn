@@ -44,7 +44,8 @@
             <div class="hero-copy reveal">
                 <p class="eyebrow" data-i18n="hero.role">Software Engineer / Web Technology</p>
                 <h1>Nguyen Huu Linh</h1>
-                <h2 class="typing-text"><span data-i18n="hero.typingPrefix">Building</span> <span class="typing-word" data-typing></span></h2>
+                <h2 class="typing-text"><span data-i18n="hero.typingPrefix">Building</span> <span class="typing-word"
+                        data-typing></span></h2>
                 <p class="hero-summary" data-i18n="hero.summary">
                     Recent Information Technology graduate focused on fullstack web development,
                     RESTful API design, authentication, authorization, and database-driven systems.
@@ -52,7 +53,8 @@
 
                 <div class="hero-actions">
                     <a href="#projects" class="btn btn-primary" data-i18n="hero.viewProjects">View Projects</a>
-                    <a href="mailto:lyn25092004@gmail.com" class="btn btn-secondary" data-i18n="hero.contactMe">Contact Me</a>
+                    <a href="mailto:lyn25092004@gmail.com" class="btn btn-secondary" data-i18n="hero.contactMe">Contact
+                        Me</a>
                 </div>
 
                 <div class="social-placeholders" aria-label="Social icon placeholders">
@@ -98,17 +100,20 @@
                 <article class="info-card" data-tilt-card>
                     <span>01</span>
                     <h3 data-i18n="about.card1.title">Fullstack Web</h3>
-                    <p data-i18n="about.card1.text">ReactJS on the frontend, Node.js, Express.js and NestJS on the backend.</p>
+                    <p data-i18n="about.card1.text">ReactJS on the frontend, Node.js, Express.js and NestJS on the
+                        backend.</p>
                 </article>
                 <article class="info-card" data-tilt-card>
                     <span>02</span>
                     <h3 data-i18n="about.card2.title">API & Security</h3>
-                    <p data-i18n="about.card2.text">RESTful API, JWT authentication, authorization, and role-based access control.</p>
+                    <p data-i18n="about.card2.text">RESTful API, JWT authentication, authorization, and role-based
+                        access control.</p>
                 </article>
                 <article class="info-card" data-tilt-card>
                     <span>03</span>
                     <h3 data-i18n="about.card3.title">Database Systems</h3>
-                    <p data-i18n="about.card3.text">MongoDB, Mongoose, MySQL, Sequelize, schema design, and query optimization basics.</p>
+                    <p data-i18n="about.card3.text">MongoDB, Mongoose, MySQL, Sequelize, schema design, and query
+                        optimization basics.</p>
                 </article>
             </div>
         </section>
@@ -276,33 +281,72 @@
                 <h2 data-i18n="projects.title">Graduation project with full e-commerce workflow.</h2>
             </div>
 
-            <article class="project-showcase" data-tilt-card>
-                <div>
-                    <p class="project-label" data-i18n="projects.label">Graduation Project</p>
-                    <h3 data-i18n="projects.name">Agricultural Supplies E-Commerce Website</h3>
-                    <p data-i18n="projects.desc">
-                        A fullstack e-commerce system with product search, cart, order placement,
-                        online payment, order tracking, admin dashboard, revenue statistics,
-                        product/order/customer management, inventory import-export-return, debt tracking,
-                        chatBox and chatBot support.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/LynKiss/FE_DATN/tree/men" data-i18n="projects.frontend">Frontend Source</a>
-                        <a href="https://github.com/LynKiss/da_be/tree/Nghiepvunangcao" data-i18n="projects.backend">Backend Source</a>
+            <div class="projects-grid">
+                <article class="project-card" data-tilt-card>
+                    <div class="project-card__image">
+                        <img src="https://s.wordpress.com/mshots/v1/https://products-management-self.vercel.app/?w=700"
+                            alt="Products Management Dashboard preview" loading="lazy">
+                        <div class="project-card__name">Products Management Backend</div>
+                        <div class="project-card__overlay">
+                            <div class="project-card__info">
+                                <p class="project-label" data-i18n="projects.label2">Backend Project</p>
+                                <h3 data-i18n="projects.name2">Products Management Server</h3>
+                                <p data-i18n="projects.desc2">
+                                    Server-side product management with Node.js, TypeScript, MongoDB, Socket.IO,
+                                    EJS view rendering, authentication and real-time stock updates.
+                                </p>
+                                <div class="project-stack">
+                                    <span>Node.js</span>
+                                    <span>TypeScript</span>
+                                    <span>MongoDB</span>
+                                    <span>Socket.IO</span>
+                                    <span>Server-side Rendering</span>
+                                    <span>EJS</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://products-management-self.vercel.app/" target="_blank"
+                                        rel="noopener noreferrer" data-i18n="projects.demo">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="project-stack">
-                    <span>ReactJS</span>
-                    <span>NestJS</span>
-                    <span>REST API</span>
-                    <span>JWT</span>
-                    <span>RBAC</span>
-                    <span>MongoDB</span>
-                    <span>MySQL</span>
-                    <span>Socket.IO</span>
-                </div>
-            </article>
+                <article class="project-card" data-tilt-card>
+                    <div class="project-card__image">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80"
+                            alt="E-commerce dashboard preview" loading="lazy">
+                        <div class="project-card__name">Agricultural E-Commerce Website</div>
+                        <div class="project-card__overlay">
+                            <div class="project-card__info">
+                                <p class="project-label" data-i18n="projects.label">Graduation Project</p>
+                                <h3 data-i18n="projects.name">Agricultural Supplies E-Commerce Website</h3>
+                                <p data-i18n="projects.desc">
+                                    A fullstack e-commerce system with product search, cart, order placement,
+                                    online payment, order tracking, admin dashboard, revenue statistics,
+                                    product/order/customer management, inventory import-export-return, debt tracking,
+                                    chatBox and chatBot support.
+                                </p>
+                                <div class="project-stack">
+                                    <span>ReactJS</span>
+                                    <span>NestJS</span>
+                                    <span>REST API</span>
+                                    <span>JWT</span>
+                                    <span>RBAC</span>
+                                    <span>MongoDB</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/LynKiss/FE_DATN/tree/men"
+                                        data-i18n="projects.frontend">Frontend
+                                        Source</a>
+                                    <a href="https://github.com/LynKiss/da_be/tree/Nghiepvunangcao"
+                                        data-i18n="projects.backend">Backend Source</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <section id="education" class="section education-section reveal">
@@ -381,6 +425,10 @@
                 "projects.desc": "A fullstack e-commerce system with product search, cart, order placement, online payment, order tracking, admin dashboard, revenue statistics, product/order/customer management, inventory import-export-return, debt tracking, chatBox and chatBot support.",
                 "projects.frontend": "Frontend Source",
                 "projects.backend": "Backend Source",
+                "projects.label2": "Backend Project",
+                "projects.name2": "Products Management Server",
+                "projects.desc2": "Server-side product management with Node.js, TypeScript, MongoDB, Socket.IO, EJS views, and real-time stock updates.",
+                "projects.demo": "Live Demo",
                 "education.eyebrow": "Education",
                 "education.title": "Foundation and learning path.",
                 "education.school": "Hung Yen University of Technology and Education (UTEHY)",
@@ -431,6 +479,10 @@
                 "projects.desc": "Hệ thống e-commerce fullstack với tìm kiếm sản phẩm, giỏ hàng, đặt hàng, thanh toán online, theo dõi đơn hàng, dashboard quản trị, thống kê doanh thu, quản lý sản phẩm/đơn hàng/khách hàng, xuất nhập đổi trả kho, công nợ, chatBox và chatBot hỗ trợ người dùng.",
                 "projects.frontend": "Mã nguồn Frontend",
                 "projects.backend": "Mã nguồn Backend",
+                "projects.label2": "Dự án backend",
+                "projects.name2": "Server quản lý sản phẩm",
+                "projects.desc2": "Quản lý sản phẩm phía server với Node.js, TypeScript, MongoDB, Socket.IO, EJS và cập nhật kho hàng thời gian thực.",
+                "projects.demo": "Xem demo",
                 "education.eyebrow": "Học vấn",
                 "education.title": "Nền tảng học tập và định hướng phát triển.",
                 "education.school": "Trường Đại học Sư phạm Kỹ thuật Hưng Yên (UTEHY)",
