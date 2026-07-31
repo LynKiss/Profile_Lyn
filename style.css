@@ -438,6 +438,54 @@ h1 {
     object-fit     : cover;
     object-position: center;
     border-radius  : 16px;
+    filter         : blur(5px) brightness(0.75);
+}
+
+.avatar-frame {
+    position: relative;
+}
+
+.avatar-overlay {
+    position      : absolute;
+    inset         : 0;
+    display       : grid;
+    place-items   : center;
+    padding       : 1.2rem;
+    background    : rgba(7, 8, 12, 0.72);
+    color         : var(--text);
+    opacity       : 1;
+    pointer-events: none;
+    text-align    : center;
+    border-radius : 16px;
+}
+
+.avatar-overlay__content {
+    max-width: 18rem;
+}
+
+.avatar-overlay__content strong {
+    display       : block;
+    margin-bottom : 0.75rem;
+    color         : var(--accent);
+    font-size     : 1rem;
+    letter-spacing: 0.03em;
+}
+
+.avatar-overlay__content p {
+    margin     : 0;
+    color      : var(--text);
+    font-size  : 0.94rem;
+    line-height: 1.6;
+}
+
+.avatar-frame:hover img {
+    filter   : blur(3px) brightness(0.75);
+    transform: scale(1.02);
+}
+
+.avatar-frame:hover .avatar-overlay {
+    opacity       : 1;
+    pointer-events: auto;
 }
 
 .profile-badge {
@@ -731,6 +779,7 @@ h1 {
 .project-card__overlay {
     position      : absolute;
     inset         : 0;
+    z-index       : 1;
     display       : grid;
     place-items   : center;
     padding       : 1rem;
@@ -741,8 +790,18 @@ h1 {
 }
 
 .project-card:hover .project-card__overlay {
-    opacity: 1;
+    opacity       : 1;
+    pointer-events: auto;
 }
+
+.project-card__info {
+    width     : min(100%, 26rem);
+    color     : var(--text);
+    text-align: left;
+    position  : relative;
+    z-index   : 2;
+}
+
 
 .project-card__info {
     width     : min(100%, 26rem);
@@ -790,6 +849,9 @@ h1 {
     border       : 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 999px;
     background   : rgba(255, 255, 255, 0.05);
+    position     : relative;
+    z-index      : 2;
+    cursor       : pointer;
 }
 
 .project-stack {
